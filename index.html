@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Squaredle Solver</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="center">
+          <div class="header-text">
+            <div class="header-text-content">Squaredle Solver</div>
+          </div>
+          <div class="info-button" id="info-button">
+            <div class="info-button-content">?</div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-container">
+        <div class="main">
+          <div class="enter">
+            <div class="enter-text">
+              <div class="text-bold">Enter the puzzle board!</div>
+              <div class="text-medium">
+                Each row separated by /<br />
+                For missing squares, enter @<br />
+                e.g. abc/d@f/ghi
+              </div>
+              </div>
+                <input class="form" id="puzzle-board-input" placeholder="abc/d@f/ghi"></input>
+                <div class="button-solve" id="puzzle-board-submit">
+                  <div class="button-solve-content" >
+                    Solve
+                </div>
+          </div>
+          <div class="result">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $('#puzzle-board-submit').on('click', function (event) {
+        event.preventDefault();
+        alert('a');
+      });
+      $('#info-button').on('click', function (event) {
+        event.preventDefault();
+        alert('TODO');
+      });
+    </script>
+  </body>
+</html>
