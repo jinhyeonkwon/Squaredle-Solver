@@ -21,9 +21,9 @@ The `Board` class in `ds.js` contains its implementation. The constructor stores
 This is a simple project without a server, so all functions are run on the client side.
 
 - JQuery for Scripts
+- JQuery-Modal for Modals
 - Figma for design
 
 ## Future works
 
 - Implementing a feature that tells user the path when the user hover or click a word
-- Implementing a info modal

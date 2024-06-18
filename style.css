@@ -64,6 +64,7 @@ body {
   border-radius: 50%;
   border: 3px solid var(--Primary-47_Primary, #3c9ab4);
   cursor: pointer;
+  text-decoration-line: none;
 }
 
 .info-button-content {
@@ -308,6 +309,59 @@ form {
 .word-content {
   color: #000;
   text-align: center;
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.info-modal {
+  display: flex;
+  width: 360px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background: var(--Tint_Gray-100_White, #fff);
+}
+
+.info-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 20px;
+}
+
+.info-modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.info-modal-close {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.info-modal-title-text {
+  flex: 1 0 0;
+  color: #000;
+  font-family: 'Noto Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.info-modal-text {
+  align-self: stretch;
+  color: #000;
   font-family: 'Noto Sans';
   font-size: 16px;
   font-style: normal;

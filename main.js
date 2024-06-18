@@ -7,6 +7,30 @@ $(document).ready(function () {
     return wordCard;
   };
 
+  $('#info-modal').hide();
+
+  const showInfoModal = function () {
+    $('#info-modal').modal({
+      fadeDuration: 200,
+      fadeDelay: 0.5,
+      closeClass: 'info-modal-close',
+      clickClose: false,
+      showClose: false,
+    });
+  };
+
+  const closeInfoModal = function () {
+    $.modal.close();
+  };
+
+  $('#info-button').on('click', function (event) {
+    showInfoModal();
+  });
+
+  $('#info-modal-close').on('click', function (event) {
+    closeInfoModal();
+  });
+
   $('#input-form').on('submit', function (event) {
     event.preventDefault();
     const boardStr = $('#puzzle-board-input').val();
@@ -66,10 +90,6 @@ $(document).ready(function () {
         $(`#${key}-letter-words`).append(wordCard);
       }
     }
-  });
-  $('#info-button').on('click', function (event) {
-    event.preventDefault();
-    alert('TODO');
   });
 });
 

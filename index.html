@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="style.css" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+      </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <script src="main.js" type="module"></script>
     <script src="word_list.js" type="module"></script>
     <script src="finder.js" type="module"></script>
@@ -21,7 +23,7 @@
           <div class="header-text">
             <div class="header-text-content">Squaredle Solver</div>
           </div>
-          <div class="info-button" id="info-button">
+          <div class="info-button" id="info-button" >
             <div class="info-button-content">?</div>
           </div>
         </div>
@@ -56,5 +58,27 @@
         </div>
       </div>
     </div>
+
+    <div class="info-modal modal" id="info-modal">
+      <div class="info-modal-content">
+        <div class="info-modal-title">
+          <div class="info-modal-title-text">Squaredle Solver</div>
+          <div class="info-modal-close" id="info-modal-close" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M2.5 22L21.5 3" stroke="black" stroke-width="5" stroke-linecap="round"/>
+              <path d="M2.5 3L21.5 22" stroke="black" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="info-modal-text">
+          It is a web program that solves the famous puzzle game <a href="https://squaredle.app/">https://squaredle.app/</a>.
+          <br/><br/>
+          This is a personal project with no affiliation with Squaredle, and I am not responsible for any disadvantages caused by using it for improper play, such as rank manipulation.
+          <br/><br/>
+          You can check out the source code in <a href="https://github.com/jinhyeonkwon/Squaredle-Solver">https://github.com/jinhyeonkwon/Squaredle-Solver</a>.
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
