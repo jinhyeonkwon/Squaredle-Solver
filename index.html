@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js" type="module"></script>
+    <script src="word_list.js" type="module"></script>
+    <script src="finder.js" type="module"></script>
+    <script src="ds.js" type="module"></script>
     <title>Squaredle Solver</title>
   </head>
   <body>
@@ -33,27 +36,25 @@
                 For missing squares, enter @<br />
                 e.g. abc/d@f/ghi
               </div>
-              </div>
-                <input class="form" id="puzzle-board-input" placeholder="abc/d@f/ghi"></input>
-                <div class="button-solve" id="puzzle-board-submit">
+            </div>
+              <form class="input-form" id="input-form">
+                <div class="form-and-error">
+                  <input class="enter-form" id="puzzle-board-input" placeholder="abc/d@f/ghi"></input>
+                  <div class="error-message" id="error-message">
+                    Error
+                  </div>
+                </div>  
+                <button class="button-solve" type="submit" id="puzzle-board-submit">
                   <div class="button-solve-content" >
                     Solve
-                </div>
+                  </div>
+                </button>
+              </form>
           </div>
           <div class="result">
           </div>
         </div>
       </div>
     </div>
-    <script>
-      $('#puzzle-board-submit').on('click', function (event) {
-        event.preventDefault();
-        alert('a');
-      });
-      $('#info-button').on('click', function (event) {
-        event.preventDefault();
-        alert('TODO');
-      });
-    </script>
   </body>
 </html>

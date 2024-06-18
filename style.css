@@ -130,7 +130,7 @@ body {
   line-height: normal;
 }
 
-.form {
+.enter-form {
   display: flex;
   padding: 10px;
   align-items: center;
@@ -147,7 +147,24 @@ body {
   line-height: normal;
 }
 
-.form::placeholder {
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.form-and-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.enter-form::placeholder {
   flex: 1 0 0;
   color: var(--Tint_Gray-80, #cacdce);
   font-family: 'Noto Sans';
@@ -155,6 +172,17 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+.error-message {
+  color: #b43c3c;
+  text-align: center;
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: none;
 }
 
 .button-solve:active {
@@ -171,6 +199,7 @@ body {
   border-radius: 15px;
   background: var(--Primary-47_Primary, #3c9ab4);
   cursor: pointer;
+  border-width: 0px;
 }
 
 .button-solve-content {
