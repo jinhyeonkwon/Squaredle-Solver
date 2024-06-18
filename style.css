@@ -225,3 +225,31 @@ form {
   margin: 0px;
   padding: 0px;
 }
+
+.result-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.result-summary-title {
+  align-self: stretch;
+  color: #000;
+  font-family: 'Noto Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.word-count {
+  align-self: stretch;
+  color: #000;
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

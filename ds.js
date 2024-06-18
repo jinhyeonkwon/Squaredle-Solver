@@ -86,6 +86,16 @@ export class Board {
     return this.answer;
   }
 
+  search() {
+    const size = this.getSize();
+    this.answer = {};
+
+    for (let i = 0; i < size[0] * size[1]; i++) {
+      this.searchFrom(i, '', new Set(), wordsTrie.root);
+    }
+    return this.getAnswer();
+  }
+
   searchFrom(location, wordSoFar, pathSoFar, trieNode) {
     // location: interpreted as an index (1-dimensional)
     const [row, col] = this.indexToTuple(location);
