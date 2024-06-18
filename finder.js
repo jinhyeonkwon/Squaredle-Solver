@@ -15,6 +15,7 @@ const solve = function (rawBoardStr) {
   } catch (err) {
     $('#error-message').text(err.message);
     $('#error-message').css('display', 'block');
+    return;
   }
   $('#error-message').text('');
   $('#error-message').css('display', 'none');
