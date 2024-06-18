@@ -10,12 +10,19 @@ $(document).ready(function () {
   $('#input-form').on('submit', function (event) {
     event.preventDefault();
     const boardStr = $('#puzzle-board-input').val();
-    const answers = solve(boardStr);
     const wordCounts = {};
     const wordPathMap = {};
     let totalCounts = 0;
 
-    console.log(answers);
+    let answers = {};
+
+    try {
+      answers = solve(boardStr);
+    } catch (err) {
+      $('#error-message').text(err.message);
+      $('#error-message').css('display', 'block');
+      return;
+    }
 
     for (let key in answers) {
       const value = answers[key];
@@ -24,6 +31,14 @@ $(document).ready(function () {
     }
 
     $('#result').empty();
+
+    if (totalCounts === 0) {
+      $('#result').append(`<div class="result-summary">
+      <div class="result-summary-title">Results</div>
+      <div class="words-count">No results found :(</div>
+      </div>`);
+      return;
+    }
 
     const resultSummary = `<div class="result-summary">
       <div class="result-summary-title">Results</div>
@@ -37,7 +52,7 @@ $(document).ready(function () {
       const nLetter = `
         <div class="n-letter" id="${key}-letter">
           <div class="n-letter-title">${key}-letter</div>
-          <div class="n-letter-count">Total word count : ${wordCounts[key]}</div>
+          <div class="n-letter-count">Word count : ${wordCounts[key]}</div>
           <div class="words" id="${key}-letter-words"></div>
           </div>`;
       $('#result').append(nLetter);
