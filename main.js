@@ -14,7 +14,6 @@ $(document).ready(function () {
       fadeDuration: 200,
       fadeDelay: 0.5,
       closeClass: 'info-modal-close',
-      clickClose: false,
       showClose: false,
     });
   };
