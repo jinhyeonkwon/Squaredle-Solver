@@ -2,6 +2,8 @@
 
 It is a web program that solves the famous puzzle game [Squaredle](https://squaredle.app/). This is a personal project with no affiliation with Squaredle, and I am not responsible for any disadvantages caused by using it for improper play, such as rank manipulation.
 
+It is currently deployed [here](https://jinhyeonkwon.github.io/Squaredle-Solver/).
+
 ## Implementations
 
 ### 1. How to save the word set for testing
