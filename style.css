@@ -244,9 +244,70 @@ form {
   line-height: normal;
 }
 
-.word-count {
+.words-count {
   align-self: stretch;
   color: #000;
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.n-letter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.n-letter-title {
+  align-self: stretch;
+  color: #000;
+  font-family: 'Noto Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.n-letter-count {
+  align-self: stretch;
+  color: #000;
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.word-card {
+  display: inline-flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: var(--Tint_Gray-97, #f7f7f8);
+}
+
+.words {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.word-card:hover {
+  background: var(--Primary-87, #cde7ee);
+}
+
+.word-content {
+  color: #000;
+  text-align: center;
   font-family: 'Noto Sans';
   font-size: 16px;
   font-style: normal;

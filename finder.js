@@ -11,7 +11,6 @@ const solve = function (rawBoardStr) {
     );
     const board = new Board(boardStr);
     answers = board.search();
-    console.log(answers);
   } catch (err) {
     $('#error-message').text(err.message);
     $('#error-message').css('display', 'block');
@@ -19,7 +18,6 @@ const solve = function (rawBoardStr) {
   }
   $('#error-message').text('');
   $('#error-message').css('display', 'none');
-  console.log(answers);
   return answers;
 };
 
